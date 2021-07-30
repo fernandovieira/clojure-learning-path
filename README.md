@@ -1,6 +1,6 @@
-# factorial
+# Learning Clojure
 
-FIXME: description
+FIXME: I'm on my way to learn clojure and start to use spacemacs 
 
 ## Installation
 
