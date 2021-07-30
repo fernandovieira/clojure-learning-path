@@ -1,7 +1,9 @@
 (ns factorial.core-test
   (:require [clojure.test :refer :all]
-            [tutorial.core :refer :all]))
+            [factorial.factorial :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest success
+  (testing "Testing factorial function"
+    (let [ f (with-in-str "5"  (-main) )]
+           (println f)
+           (is ( = 124 f)))))
