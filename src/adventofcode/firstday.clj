@@ -14,6 +14,6 @@
 
 
 (defn readFile
-  "Read a file with entries"
+  "Read a file with entries and return a list"
   []
   (def entries (list 1 2 3 )))
