@@ -13,7 +13,8 @@
 )
 
 
-(defn readFile
+(defn readFileToList
   "Read a file with entries and return a list"
   []
-  (def entries (list 1 2 3 )))
+  (def entries (list 1 2 3 ))
+  entries)
