@@ -24,4 +24,5 @@
   "Now resolving the problem"
   []
   (def entries (readFileToList))
-  (let [result (findMyStar entries)]))
+  (let [result (findMyStar entries)]
+    result))
