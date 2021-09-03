@@ -30,18 +30,21 @@
   (def answer (reduce + myList))
   (if (= answer 2020) (reduce * myList) nil))
 
-(def runThroughList
+(defn runThroughList
   "Run through a list sum"
   [firstElement expense]
+  (loop [my_list expense]
+    (if (not= nil my_list)
+      (let [[firstItem & reminder] my_list]
+      (let [ result (produceTheAnswer (list firstElement firstItem (first reminder)))])
+      (if (not= nil result) result (recur reminder)))))
 
-)
-
-(defn solvePartII
+ (defn solvePartII
   "Now three elements that sum it is equal 2020"
   []
   (def my_test '(1 3 4 2001 18 234 2))
   (loop [my_list my_test]
     (if (not= nil my_list)
       (let [[firstItem & reminder] my_list]
-        (print firstItem)
-        (recur reminder)))))
+        (let [result (runThroughList firstItem reminder)])
+        (if (not= nil result) result (recur reminder)))))
