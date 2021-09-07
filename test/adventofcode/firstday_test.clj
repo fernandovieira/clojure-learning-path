@@ -9,13 +9,13 @@
 
 (deftest mustReturn514579
   (testing "Test example of the challenge"
-  (let [result (solvePartI advocateExample)]
+    (let [result (solveProblem advocateExample 0)]
   (is ( = result 514579)))))
 
 (deftest mustReturnZero
   (testing "Test when there isn't any star"
-    (let [result (solvePartI advocateExampleFalse)]
-       (is ( = result 0)))))
+    (let [result (solveProblem advocateExampleFalse 0)]
+      (is (= result 0)))))
 
 (deftest mustReturnaList
   (testing "Read a file and must return a list"
@@ -25,10 +25,10 @@
 
 (deftest mustReturn1006176
   (testing "This is solve the advent of code day 1"
-   (let [result (resolveProblem)]
+   (let [result (solveFirstProblem)]
      (is (= 1006176 result)))))
 
 (deftest mustReturn241861950
   (testing "Test example of the challenge"
-    (let [result (sumThreeElements advocateExample)]
+    (let [result (problemWith3variables advocateExample)]
       (is ( = result 241861950)))))
