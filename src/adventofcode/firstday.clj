@@ -6,7 +6,7 @@
   "Find all my fifty star"
   [expenses acumulator]
   (loop [remaning-expenses expenses]
-    (let [[first_elem & remainder] remaning-expenses]
+    (let [[first_elem & remainder] remaning-expen wdses]
       (if (empty? remaning-expenses) 0
           (let [result (reduce (fn[x y]
                                  (if (= (+ x y acumulator) 2020) (reduced (* (if (= acumulator 0) 1 acumulator) x y))  first_elem)) first_elem remainder)]
